@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { CustomError } from "../contracts/CustomErrorContract";
-export default function ValidationExceptionMiddleware(
+export default function ExceptionHandlerMiddleware(
   error: Error,
   req: Request,
   res: Response,
