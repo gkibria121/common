@@ -1,6 +1,6 @@
 {
   "name": "@_gktickets/common",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "clean": "del-cli ./build/*",
-    "pub" : "npm run build && npm publish",
+    "pub": "npm run build && npm publish",
     "build": "git add . && git commit -m \"update\" && npm run clean && npm version patch    && tsc"
   },
   "keywords": [],
