@@ -1,4 +1,5 @@
-import { CustomError, Errors } from "../contracts/CustomErrorContract";
+import { CustomError } from "../contracts/CustomErrorContract";
+import { Errors } from "../types/error";
 class AuthException extends CustomError {
   constructor() {
     super("User is not authenticated!");

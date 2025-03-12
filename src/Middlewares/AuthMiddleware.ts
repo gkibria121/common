@@ -6,6 +6,9 @@ declare global {
   namespace Express {
     interface Request {
       user: JwtPayload | null | string;
+      session?: {
+        jwt?: string;
+      };
     }
   }
 }
@@ -16,7 +19,7 @@ export default function AuthMiddleware(
   next: NextFunction
 ): any {
   try {
-    const payload = Jwt.verify(req.session?.jwt, process.env.JWT_KEY!);
+    const payload = Jwt.verify(req.session?.jwt ?? "", process.env.JWT_KEY!);
 
     req.user = payload;
   } catch (error) {

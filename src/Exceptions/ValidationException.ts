@@ -1,7 +1,8 @@
-import { CustomError, Errors } from "../contracts/CustomErrorContract";
+import { CustomError } from "../contracts/CustomErrorContract";
 import { ValidationError } from "express-validator";
-import { ValidationError as CustomValidationError } from "../contracts/CustomErrorContract";
+import { ValidationError as CustomValidationError } from "../types/error";
 import { pluralize } from "../helpers/helpers";
+import { Errors } from "../types/error";
 class ValidationException extends CustomError {
   constructor(public errores: ValidationError[]) {
     super();
