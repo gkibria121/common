@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "clean": "del build/",
-    "build": "tsc"
+    "clean": "del-cli ./build/*",
+    "build": "npm run clean && npm version patch    && tsc"
   },
   "keywords": [],
   "author": "",
