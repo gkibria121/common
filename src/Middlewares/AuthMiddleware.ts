@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import Jwt, { JwtPayload } from "jsonwebtoken";
+import { JwtPayload, verify } from "jsonwebtoken";
 import AuthException from "../Exceptions/AuthException";
 
 declare global {
@@ -19,7 +19,7 @@ export default function AuthMiddleware(
   next: NextFunction
 ): any {
   try {
-    const payload = Jwt.verify(req.session?.jwt ?? "", process.env.JWT_KEY!);
+    const payload = verify(req.session?.jwt ?? "", process.env.JWT_KEY!);
 
     req.user = payload;
   } catch (error) {
