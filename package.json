@@ -1,7 +1,11 @@
 {
   "name": "@_gktickets/common",
   "version": "1.0.3",
-  "main": "index.js",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
     "clean": "del-cli ./build/*",
     "build": "git add . && git commit -m \"update\" && npm run clean && npm version patch    && tsc"
