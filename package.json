@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "clean": "del-cli ./build/*",
-    "pub": "npm run build && npm publish",
-    "build": "git add . && git commit -m \"update\" && npm run clean && npm version patch    && tsc"
+    "build": "git add . && git commit -m \"update\" && npm run clean && npm version patch    && tsc", 
+    "pub": "npm run build && npm publish"
   },
   "keywords": [],
   "author": "",
