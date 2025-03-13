@@ -7,7 +7,7 @@ class NotFoundException extends CustomError {
   statusCode: number = 404;
   serializeErrors(): Errors {
     return {
-      message: "User is not authenticated!",
+      message: "404 page not found!",
     };
   }
 }
