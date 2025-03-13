@@ -5,7 +5,10 @@ import AuthException from "../Exceptions/AuthException";
 declare global {
   namespace Express {
     interface Request {
-      user: JwtPayload | null | string;
+      user: {
+        id: string;
+        email: string;
+      };
       session?: {
         jwt?: string;
       };
@@ -20,8 +23,7 @@ export default function AuthMiddleware(
 ): any {
   try {
     const payload = verify(req.session?.jwt ?? "", process.env.JWT_KEY!);
-
-    req.user = payload;
+    req.user = payload as { email: string; id: string };
   } catch (error) {
     throw new AuthException();
   }
