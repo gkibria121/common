@@ -11,6 +11,8 @@ export default function ExceptionHandlerMiddleware(
     return res.status(error.statusCode).json(error.serializeErrors());
   }
 
+  console.error(error);
+
   // Fallback for unhandled errors
   res.status(500).json({ message: error.message });
 }
