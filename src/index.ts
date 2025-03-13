@@ -1,6 +1,7 @@
 import { CustomError } from "./contracts/CustomErrorContract";
 import AuthException from "./Exceptions/AuthException";
 import ValidationException from "./Exceptions/ValidationException";
+import NotFoundException from "./Exceptions/NotFoundException";
 import { pluralize, makeValidationError } from "./helpers/helpers";
 
 import AuthMiddleware from "./Middlewares/AuthMiddleware";
@@ -17,4 +18,5 @@ export {
   ExceptionHandlerMiddleware,
   ValidationError,
   Errors,
+  NotFoundException,
 };
