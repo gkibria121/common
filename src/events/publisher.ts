@@ -15,4 +15,4 @@ abstract class Publisher<T extends Event> {
     });
   }
 }
-export default Publisher;
+export { Publisher };

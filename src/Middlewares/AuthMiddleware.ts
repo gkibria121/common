@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { JwtPayload, verify } from "jsonwebtoken";
-import AuthException from "../Exceptions/AuthException";
+import { AuthException } from "../Exceptions/AuthException";
 
 declare global {
   namespace Express {

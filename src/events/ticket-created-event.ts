@@ -10,4 +10,4 @@ interface TicketCreatedEvent extends Event {
   };
 }
 
-export default TicketCreatedEvent;
+export { TicketCreatedEvent };

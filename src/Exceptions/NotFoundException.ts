@@ -12,4 +12,4 @@ class NotFoundException extends CustomError {
   }
 }
 
-export default NotFoundException;
+export { NotFoundException };

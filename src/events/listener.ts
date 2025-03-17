@@ -33,4 +33,4 @@ abstract class Listener<T extends Event> {
       : JSON.parse(data.toString("base64"));
   }
 }
-export default Listener;
+export { Listener };

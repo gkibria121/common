@@ -12,4 +12,4 @@ class AuthException extends CustomError {
   }
 }
 
-export default AuthException;
+export { AuthException };

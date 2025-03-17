@@ -42,4 +42,4 @@ class ValidationException extends CustomError {
   }
 }
 
-export default ValidationException;
+export { ValidationException };
