@@ -3,7 +3,11 @@ import { Subject } from "./subjects";
 
 interface TicketUpdatedEvent extends Event {
   subject: Subject.TicketUpdated;
-  data: null | undefined;
+  data: {
+    id: string;
+    title: string;
+    price: number;
+  };
 }
 
 export { TicketUpdatedEvent };
