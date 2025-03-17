@@ -4,7 +4,7 @@ import { Subject } from "./subjects";
 import { TicketCreatedEvent } from "./ticket-created-event";
 
 class TicketCreatedListener extends Listener<TicketCreatedEvent> {
-  subject = Subject.TicketCreated;
+  subject: Subject.TicketCreated = Subject.TicketCreated;
   constructor(client: Stan, public groupQueueName: string) {
     super(client);
   }
