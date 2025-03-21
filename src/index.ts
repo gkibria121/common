@@ -9,6 +9,8 @@ export * from "./Middlewares/AuthMiddleware";
 export * from "./Middlewares/ExceptionHandlerMiddleware";
 export * from "./types/error";
 
+export * from "./Middlewares/RequestValidatorMiddleware";
+
 export * from "./events/event";
 export * from "./events/listener";
 export * from "./events/publisher";
