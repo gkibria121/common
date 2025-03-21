@@ -1,6 +1,6 @@
 {
   "name": "@_gktickets/common",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "files": [
@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "del-cli ./build/*",
     "nats:listen": "ts-node-dev --rs src/listener.ts",
-    "nats:publish": "ts-node-dev --rs src/publisher.ts", 
+    "nats:publish": "ts-node-dev --rs src/publisher.ts",
     "build": "npm run clean && npm version patch  && tsc",
     "pub": "npm run build && npm publish"
   },
