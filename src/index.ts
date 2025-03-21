@@ -11,6 +11,7 @@ export * from "./types/error";
 
 export * from "./Middlewares/RequestValidatorMiddleware";
 
+export * from "./events/types/order-status";
 export * from "./events/event";
 export * from "./events/listener";
 export * from "./events/publisher";
