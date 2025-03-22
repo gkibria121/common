@@ -2,11 +2,11 @@ import { Event } from "./event";
 import { Subject } from "./subjects";
 
 interface OrderDeletedEvent extends Event {
-  subject: Subject.TicketCreated;
+  subject: Subject.OrderCancelled;
   data: {
     id: string;
     ticket: {
-      price: number;
+      id: string;
     };
   };
 }
