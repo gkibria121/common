@@ -5,5 +5,5 @@ const stan = nats.connect("nats-streaming", id, {
   url: "http://localhost:4222",
 });
 stan.on("connect", () => {
-  console.log("connected !");
+  console.log("connected   !");
 });
