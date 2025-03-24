@@ -9,9 +9,14 @@ const stan = nats.connect("nats-streaming", id, {
 stan.on("connect", () => {
   console.log("connected !");
 
-  new TicketCreatedPublisher(stan).publish({
-    title: "Ticket 1",
-    price: 10,
-    id: "122",
-  });
+  new TicketCreatedPublisher(stan).publish(
+    {
+      title: "Ticket 1",
+      price: 10,
+      id: "122",
+    },
+    () => {
+      console.log("Test published");
+    }
+  );
 });
