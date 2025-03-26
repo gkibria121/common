@@ -5,8 +5,10 @@ interface OrderDeletedEvent extends Event {
   subject: Subject.OrderCancelled;
   data: {
     id: string;
+    version: string;
     ticket: {
       id: string;
+      version: string;
     };
   };
 }
