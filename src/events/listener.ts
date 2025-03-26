@@ -3,7 +3,7 @@ import { Event } from "./event";
 abstract class Listener<T extends Event> {
   abstract subject: T["subject"];
   abstract groupQueueName: string;
-  private client: Stan;
+  protected client: Stan;
   protected ackWait = 5 * 1000;
   constructor(client: Stan) {
     this.client = client;
