@@ -4,7 +4,7 @@ class AuthException extends CustomError {
   constructor() {
     super("User is not authenticated!");
   }
-  statusCode: number = 403;
+  statusCode: number = 401;
   serializeErrors(): Errors {
     return {
       message: "User is not authenticated!",

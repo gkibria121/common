@@ -1,13 +1,13 @@
 import { CustomError } from "../contracts/CustomErrorContract";
 import { Errors } from "../types/error";
 class NotAuthorized extends CustomError {
-  constructor() {
-    super("User is Unauthorized!");
+  constructor(private messaege?: string) {
+    super(messaege ?? "User is Unauthorized!");
   }
-  statusCode: number = 401;
+  statusCode: number = 403;
   serializeErrors(): Errors {
     return {
-      message: "User is Unauthorized!",
+      message: this.messaege ?? "User is Unauthorized!",
     };
   }
 }
