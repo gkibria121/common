@@ -3,7 +3,7 @@ import { Subject } from "./subjects";
 import { OrderStatus } from "./types/order-status";
 
 interface OrderCreatedEvent extends Event {
-  subject: Subject.TicketCreated;
+  subject: Subject.OrderCreated;
   data: {
     id: string;
     expiresAt: string;
