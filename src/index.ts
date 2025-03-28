@@ -22,3 +22,4 @@ export * from "./events/order-deleted-event";
 export * from "./events/ticket-created-publisher";
 export * from "./events/ticket-updated-event";
 export * from "./events/ticket-deleted-event";
+export * from "./events/expiration-complete-event";
