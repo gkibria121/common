@@ -2,12 +2,12 @@ import { Event } from "./event";
 import { Subject } from "./subjects";
 import { OrderStatus } from "./types/order-status";
 
-interface ExpirationCompleteEvent extends Event {
-  subject: Subject.ExpirationComplete;
+interface PaymentCreatedEvent extends Event {
+  subject: Subject.PaymentCreated;
   data: {
     id: string;
     version: number;
   };
 }
 
-export { ExpirationCompleteEvent };
+export { PaymentCreatedEvent };
